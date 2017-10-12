@@ -3,14 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "autosuggest-highlight": "^3.1.0",
+    "lodash": "^4.17.4",
+    "material-ui": "^1.0.0-beta.13",
+    "material-ui-icons": "^1.0.0-beta.15",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0",
+    "react-autosuggest": "^9.3.2",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-number-format": "^2.0.4",
+    "react-scripts": "1.0.14",
+    "react-swipeable-views": "^0.12.8",
+    "react-text-mask": "^5.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm-run-all -p watch-theme start-js",
+    "start-js": "react-scripts start",
     "build": "react-scripts build",
+    "build-theme": "node ./utility/styles/build.js",
+    "watch-theme": "nodemon ./utility/styles/build.js --watch ./utility",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "colr": "^1.2.2",
+    "material-palette": "^1.0.0",
+    "npm-run-all": "^4.1.1"
   }
 }
